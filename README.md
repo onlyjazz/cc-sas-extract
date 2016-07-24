@@ -1,6 +1,6 @@
 # cc-sas-extract
 Java-based batch SAS XML extract 
-Code originally written by Rick Watts
+Code originally written by Rick Watts rick.watts@ualberta.ca
 WCHRI OpenClinica Export README Last updated Jan 23, 2012
 
 This package contains the following files:
@@ -22,10 +22,8 @@ This program been developed by the WCHRI Clinical Research Informatics Core for 
 
 The export2Sas script was added by Danny Lieberman (dl@software.co.il) to fix a bug with the CRFDATE format.
 
-The application and this documentation are made available to the OpenClinica user community as is with no warrantee, implied or otherwise.
-Licensed under LGPLv2.1.
+The application and this documentation are made available to the OpenClinica/ClinCapture user community as is with no warrantee, implied or otherwise.
+Licensed under LGPLv3.0
 
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License version 2.1 as published by the Free Software Foundation.
-Copyright 2010 Women & Children's Health Research Institute. All rights reserved.
-Questions? Email rick.watts@ualberta.ca
+This program is free software; you can redistribute it and/or modify it under the terms of LGPL 3.0.
 
