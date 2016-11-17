@@ -35,13 +35,13 @@ public class Column extends Item
     public ColumnData getDataPoint(Section.UniqueData d, int ordinal)
     {
 	// Find this data point in the tree first...TODO: improve this
-	String key = generateKey(d.sid, d.event_id, d.crf_version, ordinal);
+	String key = generateKey(d.sid, d.event_id,/*RR*/ d.event_crf_id, d.crf_version, ordinal);
 	ColumnData data1 = column_data_tree.get(key);
 
 	if (data1 == null) {
 	    // Sometimes, a data item can have an ordinal of 0 instead of 1
 	    if (ordinal == 1) {
-		key = generateKey(d.sid, d.event_id, d.crf_version, 0);
+		key = generateKey(d.sid, d.event_id,/*RR*/ d.event_crf_id, d.crf_version, 0);
 		data1 = column_data_tree.get(key);
 	    }
 	}
@@ -56,7 +56,7 @@ public class Column extends Item
 	
 	// data not found in the tree, so search incrementally
 	for (ColumnData data : column_data) {
-	    if (data.studySubjectId().equals(d.sid) && data.eventId().equals(d.event_id) && data.crfVersion().equals(d.crf_version)) {
+	    if (data.studySubjectId().equals(d.sid) && data.eventId().equals(d.event_id) /*RR*/&& data.event_crf_id().equals(d.event_crf_id) && data.crfVersion().equals(d.crf_version)) {
 		if (data.ordinal() == ordinal) {
 		    return data;
 		}
@@ -180,33 +180,33 @@ public class Column extends Item
 
     }
 
-    public String key(String study_subject, String event, String crf_version)
+    public String key(String study_subject, String event,/*RR*/String event_crf_id, String crf_version)
     {
-	return study_subject + "<>" + event + "<>" + crf_version;
+	return study_subject + "<>" + event /*RR*/+ "<>" + event_crf_id /*RR*/+ "<>" + crf_version ;
     }
 
-    public String generateKey(String study_subject, String event, String crf_version, int ordinal)
+    public String generateKey(String study_subject, String event,/*RR*/String event_crf_id, String crf_version, int ordinal)
     {
-	return study_subject + "<>" + event + "<>" + crf_version + "<>" + ordinal;
+	return study_subject + "<>" + event /*RR*/+ "<>" + event_crf_id /*RR*/+ "<>" + crf_version + "<>" + ordinal;
     }
 
-    public void insertData(String study_subject, String event, String crf_version, String crf_name, String site, String event_startdt, String value, int ordinal)
+    public void insertData(String study_subject, String event,/*RR*/String event_crf_id, String crf_version, String crf_name, String site, String event_startdt, String value, int ordinal)
     {
-	ColumnData data = new ColumnData(this, study_subject, event, crf_version, crf_name, site, event_startdt, value, ordinal);
+	ColumnData data = new ColumnData(this, study_subject, event,/*RR*/event_crf_id, crf_version, crf_name, site, event_startdt, value, ordinal);
 
 	// Store the max ordinal, which represents how many repeat events have been "repeated" for this subject on this section
-	Integer max_ordinal = max_ordinals.get(key(study_subject,event,crf_version));
+	Integer max_ordinal = max_ordinals.get(key(study_subject,event,/*RR*/event_crf_id,crf_version));
 
 	if (max_ordinal == null) {
-	    max_ordinals.put(key(study_subject,event,crf_version), new Integer(ordinal));
+	    max_ordinals.put(key(study_subject,event,/*RR*/event_crf_id,crf_version), new Integer(ordinal));
 	} else {       
 	    if (ordinal > max_ordinal.intValue()) {
-		max_ordinals.put(key(study_subject,event,crf_version),new Integer(ordinal));
+		max_ordinals.put(key(study_subject,event,/*RR*/event_crf_id,crf_version),new Integer(ordinal));
 	    }
 	}
 
 	column_data.add(data);
-	String key = generateKey(study_subject, event, crf_version, ordinal);
+	String key = generateKey(study_subject, event,/*RR*/event_crf_id, crf_version, ordinal);
 	//column_data_tree.put(key, data);  // TODO: Speed improvement
 
 	if (value != null) {
@@ -241,7 +241,7 @@ public class Column extends Item
 	ColumnData data = new ColumnData(this, study_subject, value);
 	column_data.add(data);
 
-	String key = generateKey(study_subject, "-", "-", 0);
+	String key = generateKey(study_subject, "-", "-",/*RR*/"-", 0);
 	//column_data_tree.put(key, data);  // TODO: Speed improvement
 
 	if (value != null) {
@@ -259,7 +259,7 @@ public class Column extends Item
 	ArrayList<ColumnData> removeThese = new ArrayList<ColumnData>();
 
 	for (ColumnData data : column_data) {
-	    if (data.studySubjectId().equals(d.sid) && data.eventId().equals(d.event_id) && data.crfVersion().equals(d.crf_version)) {
+	    if (data.studySubjectId().equals(d.sid) && data.eventId().equals(d.event_id) && data.crfVersion().equals(d.crf_version)/*RR*/&& data.event_crf_id().equals(d.event_crf_id)) {
 		removeThese.add(data);
 	    }
 	}
@@ -300,7 +300,7 @@ public class Column extends Item
 
     public int getDepth(Section.UniqueData d)
     {
-	Integer max = max_ordinals.get(key(d.sid,d.event_id,d.crf_version));
+	Integer max = max_ordinals.get(key(d.sid,d.event_id,/*RR*/,d.event_crf_id,d.crf_version));
 
 	if (max == null) {
 	    return 1;
@@ -480,6 +480,8 @@ public class Column extends Item
 	    System.out.println("----------");
 	    System.out.println(space+space+"Value: " + data.value());
 	    System.out.println(space+space+"EventID: " + data.eventId());
+		//RR
+		System.out.println(space+space+"event_crf_id: " + data.event_crf_id());
 	    System.out.println(space+space+"studySubjectId: " + data.studySubjectId());
 	    System.out.println(space+space+"crfVersion: " + data.crfVersion());
 	    System.out.println(space+space+"crfName: " + data.crfName());

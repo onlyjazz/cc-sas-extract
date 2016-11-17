@@ -73,7 +73,7 @@ public class ContainerItem extends Item
      *                 an ordinal of 1.
      *
      **/
-    public void insertData(String study_subject_id, String site, String event, String crf_version,
+    public void insertData(String study_subject_id, String site, String event,/*RR*/ String event_crf_id, String crf_version,
 			   String crf_name, String event_startdt, String item_name, String value,
 			   int ordinal)
     {
@@ -86,7 +86,7 @@ public class ContainerItem extends Item
 	}
 
 	// Store this data point in the Column Object
-	column.insertData(study_subject_id, event, crf_version, crf_name, site, event_startdt, value, ordinal);
+	column.insertData(study_subject_id, event,/*RR*/ event_crf_id, crf_version, crf_name, site, event_startdt, value, ordinal);
     }
     
     // Add an Item object to this Container Object. Items added here represent metadata.

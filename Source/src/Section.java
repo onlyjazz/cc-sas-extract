@@ -33,12 +33,16 @@ public class Section extends ContainerItem
 	public String sid;
 	public String crf_version;
 	public String event_id;
+	//RR
+	public String event_crf_id;
 
-	public UniqueData(String s, String c, String e)
+	public UniqueData(String s, String c, String e, /*RR*/ String ec)
 	{
 	    sid = s;
 	    crf_version = c;
 	    event_id = e;
+		//RR
+		event_crf_id = ec;
 	}
 
 	public int hashCode() 
@@ -57,12 +61,16 @@ public class Section extends ContainerItem
 	    if (!event_id.equals( ((UniqueData)u).event_id))
 		return false;
 
+		//RR
+		if (!event_crf_id.equals( ((UniqueData)u).event_crf_id))
+		return false;
+
 	    else return true;
 	}
 		
 	public void print()
 	{
-	    System.out.println("sid: " + sid + "\tcrf_version: " + crf_version + "\tevent_id: " + event_id);
+	    System.out.println("sid: " + sid + "\tcrf_version: " + crf_version + "\tevent_id: " + event_id /*RR*/ + "\tevent_crf_id: " + event_crf_id);
 	}
     }
 
@@ -98,6 +106,8 @@ public class Section extends ContainerItem
 	column = new Column("event_startdt","Event start date time","numeric","datetime",19,19,"IS8601DT"); addItem(column);
 	column = new Column("crf_name","Crf Name","character","string",50,50,"$CHAR");	                    addItem(column);
 	column = new Column("crf_version","Crf Version","character","string",50,50,"$CHAR");	            addItem(column);
+	//RR
+	column = new Column("event_crf_id","Event Crf","character","string",50,50,"$CHAR");	            addItem(column);
     }
 
     /** Gets all combinations of subject, crf_version and event that exist in this section 
@@ -128,7 +138,7 @@ public class Section extends ContainerItem
 	HashSet<UniqueData> hash = new HashSet<UniqueData>(1000000);
 
 	for (ColumnData d : data) {
-	    UniqueData u = new UniqueData(d.studySubjectId(), d.crfVersion(), d.eventId());
+	    UniqueData u = new UniqueData(d.studySubjectId(), d.crfVersion(), d.eventId() /*RR*/ d.event_crf_id);
 	    hash.add(u);
 	}
 
@@ -317,9 +327,12 @@ public class Section extends ContainerItem
 	    file.write(indent + "<study_site>"+Helper.cleanse(column_data.site())+"</study_site>"); file.newLine();
 	    file.write(indent + "<sid>"+ Helper.cleanse(d.sid)+"</sid>"); file.newLine();
 	    file.write(indent + "<study_event>"+ Helper.cleanse(d.event_id)+"</study_event>"); file.newLine();
+		//RR
+		file.write(indent + "<event_crf_id>"+ Helper.cleanse(d.event_crf_id)+"</event_crf_id>"); file.newLine();
 	    file.write(indent + "<event_startdt>"+Helper.cleanse(column_data.eventStartDate())+"</event_startdt>"); file.newLine();
 	    file.write(indent + "<crf_name>"+Helper.cleanse(column_data.crfName())+"</crf_name>"); file.newLine();
 	    file.write(indent + "<crf_version>"+ Helper.cleanse(column_data.crfVersion())+"</crf_version>"); file.newLine();
+		
 
 	} catch (IOException e) {}
 
