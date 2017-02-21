@@ -1,8 +1,8 @@
 #!/bin/bash
-sn="DM-MPBA-0813"
+sn="vibe2"
 mf="$sn"".map.xml"
 xf="$sn"".xml"
-java -jar export.jar -h localhost -p 5432 -sname "$sn" -U clinica -P clinica -D xlnz2 -mapFile "$mf" -xmlFile "$xf"
+java -jar export.jar -h dev1 -p 5432 -sname "$sn" -U postgres -P 9701485dl -D vibe2 -mapFile "$mf" -xmlFile "$xf"
 sed -i s/mmddyy10/IS8601DA/ *.xml
 echo "Now zipping the files"
 zf="$sn".z
@@ -10,7 +10,7 @@ zip   "$zf"  *xml
 #cp *xml ~/Dropbox/ClearClinica/SASExtracts/
 #lisa-d@013.net 
 #frederic.deutsch@gmail.com
-bcc="dl@software.co.il"
-to="doc3@medrepnet.com"
+bcc="rivkar@clearclinica.com"
+to="rivkar@clearclinica.com"
 echo "Greetings from the weekly SAS export for $sn.  Download and unzip the attached file to extract the xml and map files" | mutt -s "$sn SAS export" "$to"  -a "$zf" -b "$bcc" -e 'my_hdr From:ClearClinica<no-reply@repnets.com>'
 exit 0
