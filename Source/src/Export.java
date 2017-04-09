@@ -460,8 +460,6 @@ class Export
 	discrepancy_section.addItem(new Column("thread_id", "The thread id for this discrepancy note.", "text", -1, "ST"));
 	discrepancy_section.addItem(new Column("parent_thread_id", "The parent thread id for this discrepancy note.", "text", -1, "ST"));
 	discrepancy_section.addItem(new Column("study_event", "Study event", "text", -1, "ST"));
-	//RR
-	discrepancy_section.addItem(new Column("event_crf_id", "event_crf_id", "text", -1, "ST"));
 	discrepancy_section.addItem(new Column("event_startdt", "Event start date", "date", -1, "ISODATE"));
 	discrepancy_section.addItem(new Column("user_name", "User who created this discrepancy", "text", -1, "ST"));
 	discrepancy_section.addItem(new Column("description", "Discrepancy note description", "text", -1, "ST"));
@@ -480,9 +478,6 @@ class Export
 		"       d.parent_dn_id as parent_thread_id, u.user_name, ss.label as sid, " +
 		"       sed.name as event, d.description, rs.name as resolution_status, " +
 		"       d.detailed_notes, d.date_created, id.value, i.name as column_name " + 
-		//RR
-		"       e.event_crf_id " + 
-
 		"from   user_account u, study_subject ss, event_crf e, item_data id, item i, " +
 		"       study_event se, study_event_definition sed, study st, " +
 		"       discrepancy_note d, discrepancy_note_type dnt, resolution_status rs, dn_item_data_map im, " + 
@@ -524,8 +519,6 @@ class Export
 		String date_created = res.getString("date_created");
 		String item_value = res.getString("value");
 		String column_name = res.getString("column_name");
-		//RR
-		String event_crf_id = res.getString("event_crf_id");
 		
 		if (parent_thread_id == null) {
 		    parent_thread_id = thread_id;
@@ -538,8 +531,6 @@ class Export
 		discrepancyTable.insertData(""+note_num, "thread_id", thread_id);
 		discrepancyTable.insertData(""+note_num, "parent_thread_id", parent_thread_id);
 		discrepancyTable.insertData(""+note_num, "study_event", event);
-		//RR
-		discrepancyTable.insertData(""+note_num, "event_crf_id", event_crf_id);
 		discrepancyTable.insertData(""+note_num, "event_startdt", event_startdt);
 		discrepancyTable.insertData(""+note_num, "user_name", user_name);
 		discrepancyTable.insertData(""+note_num, "description", description);
@@ -548,7 +539,6 @@ class Export
 		discrepancyTable.insertData(""+note_num, "date_created", date_created);
 		discrepancyTable.insertData(""+note_num, "item_value", item_value);
 		discrepancyTable.insertData(""+note_num, "column_name", column_name);
-
 
 		note_num++;
 	    }
@@ -575,8 +565,6 @@ class Export
 	se_section.addItem(new Column("study_site", "The site that the subject is enrolled in", "text", -1, "ST"));
 	se_section.addItem(new Column("sid", "Study subject ID", "text", -1, "ST"));
 	se_section.addItem(new Column("study_event", "Study event", "text", -1, "ST"));
-	//RR
-	se_section.addItem(new Column("event_crf_id", "event_crf_id", "text", -1, "ST"));
 	se_section.addItem(new Column("event_startdt", "Event start date", "date", -1, "DATETIME"));
 	se_section.addItem(new Column("event_enddt", "Event end date", "date", -1, "DATETIME"));
 	se_section.addItem(new Column("event_status", "Event status", "text", -1, "ST"));
@@ -590,24 +578,18 @@ class Export
 		"       se.date_start as event_startdt, " +
 		"       se.date_end as event_enddt, " +
 		"       sta.name as event_status " +
-		//RR
-		"       ,e.event_crf_id " +
 		"from   study s, " +
 		"       study_subject ss, " +
 		"       study_event se, " +
 		"       study_event_definition sed, " +
 		"       subject_event_status sta " +
-		//RR
-		"       event_crf e " +
 		"where  (s.study_id = " + study_id + " or s.parent_study_id = " + study_id + ") and " +
 		"       s.study_id = ss.study_id and " +
 		"       se.study_subject_id = ss.study_subject_id and " +
 		"       sed.study_event_definition_id = se.study_event_definition_id and " +
 		"       se.subject_event_status_id = sta.subject_event_status_id and " + 
 		"       ss.status_id != 5 and ss.status_id != 7 " +
-		//RR
-		"       e.study_event_id = se.study_event_id" +
-		"group by sid, site, event, event_startdt, event_enddt, event_status" /*RR*/+ ",e.event_crf_id";
+		"group by sid, site, event, event_startdt, event_enddt, event_status";
 
 	    ResultSet res = st.executeQuery(query);
 	    int note_num = 0;
@@ -617,8 +599,6 @@ class Export
 		String sid = res.getString("sid");
 		String site = res.getString("site");
 		String event = res.getString("event");
-		//RR
-		String event_crf_id = res.getString("event_crf_id");
 		String event_startdt = res.getString("event_startdt");
 		String event_enddt = res.getString("event_enddt");
 		String event_status = res.getString("event_status");
@@ -627,8 +607,6 @@ class Export
 		seTable.insertData(""+note_num, "sid", sid);
 		seTable.insertData(""+note_num, "study_site", site);
 		seTable.insertData(""+note_num, "study_event", event);
-		//RR
-		seTable.insertData(""+note_num, "event_crf_id", event);
 		seTable.insertData(""+note_num, "event_startdt", event_startdt);
 		seTable.insertData(""+note_num, "event_enddt", event_enddt);
 		seTable.insertData(""+note_num, "event_status", event_status);
@@ -657,8 +635,6 @@ class Export
 	se_section.addItem(new Column("study_site", "The site that the subject is enrolled in", "text", -1, "ST"));
 	se_section.addItem(new Column("sid", "Study subject ID", "text", -1, "ST"));
 	se_section.addItem(new Column("study_event", "Study event", "text", -1, "ST"));
-	//RR
-	se_section.addItem(new Column("event_crf_id", "event_crf_id", "text", -1, "ST"));
 	se_section.addItem(new Column("event_startdt", "Event start date", "date", -1, "DATETIME"));
 	se_section.addItem(new Column("crf_name", "CRF Name", "text", -1, "ST"));
 	se_section.addItem(new Column("crf_version","CRF Version", "text", -1, "ST"));
@@ -678,9 +654,7 @@ class Export
 		"       cv.name as crf_version, " +
 		"       e.date_created as date_created, " +
 		"       e.date_completed as date_completed, " +
-		"       status.name as event_crf_status, " +
-		// RR added according to event_crf_id
-		"       v.event_crf_id as event_crf_id " +
+		"       status.name as event_crf_status " +
 		"from   study s, " +
 		"       study_subject ss, " +
 		"       study_event se, " +
@@ -699,7 +673,7 @@ class Export
 		"       e.status_id = status.status_id and " +
 		"       e.status_id != 7 and e.status_id != 5 AND " +
 		"       cv.status_id != 7 and cv.status_id != 5 " + // Must check version as well
-		"group by sid, site, event, crf_name, crf_version, event_startdt, e.date_created, date_completed, event_crf_status"/*RR*/+",v.event_crf_id";
+		"group by sid, site, event, crf_name, crf_version, event_startdt, e.date_created, e.date_completed, event_crf_status";
 
 	    ResultSet res = st.executeQuery(query);
 	    int note_num = 0;
@@ -715,8 +689,6 @@ class Export
 		String date_created = res.getString("date_created");
 		String date_completed = res.getString("date_completed");
 		String crf_status = res.getString("event_crf_status");
-		// RR added according to event_crf_id 
-		String event_crf_id = res.getString("event_crf_id");
 
 		//if (crf_status.equals("unavailable")) {
 		//    crf_status = "completed";
@@ -726,15 +698,12 @@ class Export
 		subjectCRFTable.insertData(""+note_num, "sid", sid);
 		subjectCRFTable.insertData(""+note_num, "study_site", site);
 		subjectCRFTable.insertData(""+note_num, "study_event", event);
-		// RR added according to event_crf_id 
-		subjectCRFTable.insertData(""+note_num, "event_crf_id", event_crf_id);
 		subjectCRFTable.insertData(""+note_num, "event_startdt", event_startdt);
 		subjectCRFTable.insertData(""+note_num, "crf_name", crf_name);
 		subjectCRFTable.insertData(""+note_num, "crf_version", crf_version);
 		subjectCRFTable.insertData(""+note_num, "date_created", date_created);
 		subjectCRFTable.insertData(""+note_num, "date_completed", date_completed);
 		subjectCRFTable.insertData(""+note_num, "event_crf_status", crf_status);
-		
 
 		note_num++;
 	    }
@@ -784,9 +753,7 @@ class Export
 		"       c.name AS crf_version, " +
 		"       i.name AS item_name, " +
 		"       d.value, " +
-		"       d.ordinal, " +  // Used to determine which order this item is in if it belongs to a group
-		// RR added according to event_crf_id
-		"       e.event_crf_id " + 
+		"       d.ordinal " +  // Used to determine which order this item is in if it belongs to a group
 		"FROM   item_data d, " +
 		"       item i, " +
 		"       event_crf e, " + 
@@ -842,8 +809,6 @@ class Export
 		int ordinal = res.getInt("ordinal");
 		String crf_version = res.getString("crf_version");
 		String crf_name = res.getString("crf_name");
-		// RR added according to event_crf_id
-		String event_crf_id = res.getString("event_crf_id");
 
 		// Check if this sid is a new one. This would signify that a complete subject has been pulled from the DB and this 
 		// section could be written to disk if need be
@@ -875,7 +840,7 @@ class Export
 		    }
 		}
 		
-		section.insertData(sid, site, event,/*RR*/event_crf_id, crf_version, crf_name, event_startdt, item_name, value, ordinal  );
+		section.insertData(sid, site, event, crf_version, crf_name, event_startdt, item_name, value, ordinal);
 	    }
 
 	    ((Section)section).sectionCompleted();

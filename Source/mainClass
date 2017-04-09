@@ -1,2 +1,2 @@
 Main-Class: Export
-Class-Path: postgresql-8.1-405.jdbc3.jar
+Class-Path: postgresql-9.3-1103.jdbc3.jar
