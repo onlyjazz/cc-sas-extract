@@ -138,7 +138,7 @@ public class Section extends ContainerItem
 	HashSet<UniqueData> hash = new HashSet<UniqueData>(1000000);
 
 	for (ColumnData d : data) {
-	    UniqueData u = new UniqueData(d.studySubjectId(), d.crfVersion(), d.eventId() /*RR*/ d.event_crf_id);
+	    UniqueData u = new UniqueData(d.studySubjectId(), d.crfVersion(), d.eventId() /*RR*/, d.event_crf_id);
 	    hash.add(u);
 	}
 

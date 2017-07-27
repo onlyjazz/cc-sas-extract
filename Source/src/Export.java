@@ -754,6 +754,7 @@ class Export
 		"       i.name AS item_name, " +
 		"       d.value, " +
 		"       d.ordinal " +  // Used to determine which order this item is in if it belongs to a group
+		"       e.event_crf_id " +  // RR
 		"FROM   item_data d, " +
 		"       item i, " +
 		"       event_crf e, " + 
@@ -809,6 +810,7 @@ class Export
 		int ordinal = res.getInt("ordinal");
 		String crf_version = res.getString("crf_version");
 		String crf_name = res.getString("crf_name");
+		int event_crf_id = res.getInt("event_crf_id");//RR
 
 		// Check if this sid is a new one. This would signify that a complete subject has been pulled from the DB and this 
 		// section could be written to disk if need be
@@ -840,7 +842,7 @@ class Export
 		    }
 		}
 		
-		section.insertData(sid, site, event, crf_version, crf_name, event_startdt, item_name, value, ordinal);
+		section.insertData(sid, site, event, crf_version, crf_name, event_startdt, item_name, value, ordinal,event_crf_id);
 	    }
 
 	    ((Section)section).sectionCompleted();
