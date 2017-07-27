@@ -300,7 +300,7 @@ public class Column extends Item
 
     public int getDepth(Section.UniqueData d)
     {
-	Integer max = max_ordinals.get(key(d.sid,d.event_id,/*RR*/,d.event_crf_id,d.crf_version));
+	Integer max = max_ordinals.get(key(d.sid,d.event_id,/*RR*/ d.event_crf_id,d.crf_version));
 
 	if (max == null) {
 	    return 1;
