@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="cc-sas-extract:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9e122e25-9876-4f1e-82af-fd392f6c1cfa" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cc-sas-extract.iml" afterPath="$PROJECT_DIR$/.idea/cc-sas-extract.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source/build.xml" afterPath="$PROJECT_DIR$/Source/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source/src/Column.java" afterPath="$PROJECT_DIR$/Source/src/Column.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source/src/ColumnData.java" afterPath="$PROJECT_DIR$/Source/src/ColumnData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Source/src/Export.java" afterPath="$PROJECT_DIR$/Source/src/Export.java" />
@@ -30,8 +39,8 @@
       <file leaf-file-name="Section.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/src/Section.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="140" column="111" selection-start-line="140" selection-start-column="111" selection-end-line="140" selection-end-column="111" />
+            <state relative-caret-position="241">
+              <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -40,8 +49,8 @@
       <file leaf-file-name="ColumnData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/src/ColumnData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="79" column="31" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="31" />
+            <state relative-caret-position="360">
+              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -50,31 +59,8 @@
       <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SectionTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Source/src/SectionTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-              <folding>
-                <element signature="e#118#119#0" expanded="true" />
-                <element signature="e#138#139#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestCase.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/junit/framework/TestCase.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="493">
+              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -83,8 +69,8 @@
       <file leaf-file-name="Column.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/src/Column.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="302" column="63" selection-start-line="302" selection-start-column="63" selection-end-line="302" selection-end-column="63" />
+            <state relative-caret-position="177">
+              <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,26 +81,28 @@
       <file leaf-file-name="Export.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Source/src/Export.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="842" column="9" selection-start-line="842" selection-start-column="9" selection-end-line="842" selection-end-column="9" />
+            <state relative-caret-position="243">
+              <caret line="853" column="0" selection-start-line="853" selection-start-column="0" selection-end-line="853" selection-end-column="0" />
               <folding>
-                <element signature="e#38398#38406#0" expanded="true" />
-                <element signature="e#38457#38465#0" expanded="true" />
-                <element signature="e#38515#38523#0" expanded="true" />
-                <element signature="e#38579#38587#0" expanded="true" />
-                <element signature="e#38645#38653#0" expanded="true" />
-                <marker date="1501151489374" expanded="true" signature="5016:5667" ph="SELECT DISTI... crf" />
-                <marker date="1501151489374" expanded="true" signature="9414:9591" ph="SELECT s.tit... section" />
-                <marker date="1501151489374" expanded="true" signature="11573:11774" ph="SELECT disti... study" />
-                <marker date="1501151489374" expanded="true" signature="11949:12536" ph="SELECT ss.la... study" />
-                <marker date="1501151489374" expanded="true" signature="13673:14275" ph="select ss.la... " />
-                <marker date="1501151489374" expanded="true" signature="16925:18584" ph="select st.na... user_account" />
-                <marker date="1501151489374" expanded="true" signature="21808:22664" ph="select s.nam... study" />
-                <marker date="1501151489374" expanded="true" signature="24945:26251" ph="select s.nam... study" />
-                <marker date="1501151489374" expanded="true" signature="28686:30401" ph="SELECT s.nam... item_data" />
-                <marker date="1501151489374" expanded="true" signature="32859:33587" ph="SELECT g.ite... item" />
-                <marker date="1501151489374" expanded="true" signature="36246:36610" ph="SELECT COUNT... event_definition_crf" />
-                <marker date="1501151489374" expanded="true" signature="37021:38242" ph="SELECT dt.co... response_set" />
+                <element signature="e#38481#38489#0" expanded="true" />
+                <element signature="e#38540#38548#0" expanded="true" />
+                <element signature="e#38598#38606#0" expanded="true" />
+                <element signature="e#38662#38670#0" expanded="true" />
+                <element signature="e#38728#38736#0" expanded="true" />
+                <element signature="e#40847#40848#0" expanded="true" />
+                <element signature="e#40886#40887#0" expanded="true" />
+                <marker date="1501156830562" expanded="true" signature="5016:5667" ph="SELECT DISTI... crf" />
+                <marker date="1501156830562" expanded="true" signature="9414:9591" ph="SELECT s.tit... section" />
+                <marker date="1501156830562" expanded="true" signature="11573:11774" ph="SELECT disti... study" />
+                <marker date="1501156830562" expanded="true" signature="11949:12536" ph="SELECT ss.la... study" />
+                <marker date="1501156830562" expanded="true" signature="13673:14275" ph="select ss.la... " />
+                <marker date="1501156830562" expanded="true" signature="16925:18584" ph="select st.na... user_account" />
+                <marker date="1501156830562" expanded="true" signature="21808:22664" ph="select s.nam... study" />
+                <marker date="1501156830562" expanded="true" signature="24945:26251" ph="select s.nam... study" />
+                <marker date="1501156830562" expanded="true" signature="28686:30401" ph="SELECT s.nam... item_data" />
+                <marker date="1501156830562" expanded="true" signature="32942:33670" ph="SELECT g.ite... item" />
+                <marker date="1501156830562" expanded="true" signature="36329:36693" ph="SELECT COUNT... event_definition_crf" />
+                <marker date="1501156830562" expanded="true" signature="37104:38325" ph="SELECT dt.co... response_set" />
               </folding>
             </state>
           </provider>
@@ -123,9 +111,13 @@
       <file leaf-file-name="UserInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/src/UserInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16665">
-              <caret line="529" column="18" selection-start-line="529" selection-start-column="18" selection-end-line="529" selection-end-column="18" />
+            <state relative-caret-position="258">
+              <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7074#7082#0" expanded="true" />
+                <element signature="e#7129#7137#0" expanded="true" />
+                <element signature="e#7185#7193#0" expanded="true" />
                 <marker date="1501145723703" expanded="true" signature="7676:7725" ph="select name,... study" />
                 <marker date="1501145723703" expanded="true" signature="8061:8112" ph="select name,... study" />
                 <marker date="1501145723703" expanded="true" signature="8446:8506" ph="select name,... study" />
@@ -140,12 +132,10 @@
       <file leaf-file-name="ContainerItem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/src/ContainerItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+            <state relative-caret-position="472">
+              <caret line="286" column="0" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
               <folding>
-                <element signature="e#4250#4251#0" expanded="false" />
-                <element signature="e#4281#4282#0" expanded="false" />
-                <element signature="e#11504#11519#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,10 +156,10 @@
       <list>
         <option value="$PROJECT_DIR$/Source/src/SectionTest.java" />
         <option value="$PROJECT_DIR$/Source/build.xml" />
+        <option value="$PROJECT_DIR$/Source/src/Export.java" />
+        <option value="$PROJECT_DIR$/Source/src/Section.java" />
         <option value="$PROJECT_DIR$/Source/src/Column.java" />
         <option value="$PROJECT_DIR$/Source/src/ColumnData.java" />
-        <option value="$PROJECT_DIR$/Source/src/Section.java" />
-        <option value="$PROJECT_DIR$/Source/src/Export.java" />
       </list>
     </option>
   </component>
@@ -282,6 +272,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cc-sas-extract" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cc-sas-extract" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cc-sas-extract" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cc-sas-extract" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cc-sas-extract" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cc-sas-extract" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -314,7 +362,13 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Export">
+    <configuration default="false" name="export.jar" type="JarApplication" factoryName="JAR Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/Source/dist/export.jar" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -709,6 +763,30 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <configuration default="false" name="Export" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Export" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="-h localhost -p 15432 -study_name &quot;Migraine Treatment with Nerivio Migra neurostimulation device&quot; -U clinica -P &quot;cc20!7liN07&quot; -D clearclinica_thera -mapFile &quot;TCH_002 Version 2.0.map.xml&quot; -xmlFile &quot;TCH_002 Version 2.0.xml&quot;" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="cc-sas-extract" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.Export" />
+      <item index="1" class="java.lang.String" itemvalue="JAR Application.export.jar" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JAR Application.export.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -723,20 +801,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501145750440</updated>
-      <workItem from="1501145752064" duration="3997000" />
+      <workItem from="1501145752064" duration="9056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3997000" />
+    <option name="totallyTimeSpent" value="9056000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3226" height="1664" extended-state="7" />
-    <editor active="false" />
+    <frame x="-13" y="-13" width="3226" height="1664" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33016106" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33016106" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -753,7 +831,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20308483" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39458272" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -773,7 +851,28 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Source/src/Export.java</url>
+          <line>1086</line>
+          <properties />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Source/src/Export.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Source/src/Column.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="13" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -784,6 +883,14 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/junit/framework/TestCase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Source/mainClass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -792,23 +899,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source/src/ContainerItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-          <folding>
-            <element signature="e#4250#4251#0" expanded="false" />
-            <element signature="e#4281#4282#0" expanded="false" />
-            <element signature="e#11504#11519#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Source/src/UserInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16665">
-          <caret line="529" column="18" selection-start-line="529" selection-start-column="18" selection-end-line="529" selection-end-column="18" />
+        <state relative-caret-position="258">
+          <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7074#7082#0" expanded="true" />
+            <element signature="e#7129#7137#0" expanded="true" />
+            <element signature="e#7185#7193#0" expanded="true" />
             <marker date="1501145723703" expanded="true" signature="7676:7725" ph="select name,... study" />
             <marker date="1501145723703" expanded="true" signature="8061:8112" ph="select name,... study" />
             <marker date="1501145723703" expanded="true" signature="8446:8506" ph="select name,... study" />
@@ -821,19 +920,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Source/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        <state relative-caret-position="493">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source/src/Column.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="302" column="63" selection-start-line="302" selection-start-column="63" selection-end-line="302" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -841,59 +930,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding>
-            <element signature="e#118#119#0" expanded="true" />
-            <element signature="e#138#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/junit/framework/TestCase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source/src/ColumnData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="79" column="31" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Source/src/Section.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="140" column="111" selection-start-line="140" selection-start-column="111" selection-end-line="140" selection-end-column="111" />
+        <state relative-caret-position="241">
+          <caret line="225" column="0" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/src/ContainerItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="286" column="0" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/src/Column.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/src/ColumnData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Source/src/Export.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="842" column="9" selection-start-line="842" selection-start-column="9" selection-end-line="842" selection-end-column="9" />
+        <state relative-caret-position="243">
+          <caret line="853" column="0" selection-start-line="853" selection-start-column="0" selection-end-line="853" selection-end-column="0" />
           <folding>
-            <element signature="e#38398#38406#0" expanded="true" />
-            <element signature="e#38457#38465#0" expanded="true" />
-            <element signature="e#38515#38523#0" expanded="true" />
-            <element signature="e#38579#38587#0" expanded="true" />
-            <element signature="e#38645#38653#0" expanded="true" />
-            <marker date="1501151489374" expanded="true" signature="5016:5667" ph="SELECT DISTI... crf" />
-            <marker date="1501151489374" expanded="true" signature="9414:9591" ph="SELECT s.tit... section" />
-            <marker date="1501151489374" expanded="true" signature="11573:11774" ph="SELECT disti... study" />
-            <marker date="1501151489374" expanded="true" signature="11949:12536" ph="SELECT ss.la... study" />
-            <marker date="1501151489374" expanded="true" signature="13673:14275" ph="select ss.la... " />
-            <marker date="1501151489374" expanded="true" signature="16925:18584" ph="select st.na... user_account" />
-            <marker date="1501151489374" expanded="true" signature="21808:22664" ph="select s.nam... study" />
-            <marker date="1501151489374" expanded="true" signature="24945:26251" ph="select s.nam... study" />
-            <marker date="1501151489374" expanded="true" signature="28686:30401" ph="SELECT s.nam... item_data" />
-            <marker date="1501151489374" expanded="true" signature="32859:33587" ph="SELECT g.ite... item" />
-            <marker date="1501151489374" expanded="true" signature="36246:36610" ph="SELECT COUNT... event_definition_crf" />
-            <marker date="1501151489374" expanded="true" signature="37021:38242" ph="SELECT dt.co... response_set" />
+            <element signature="e#38481#38489#0" expanded="true" />
+            <element signature="e#38540#38548#0" expanded="true" />
+            <element signature="e#38598#38606#0" expanded="true" />
+            <element signature="e#38662#38670#0" expanded="true" />
+            <element signature="e#38728#38736#0" expanded="true" />
+            <element signature="e#40847#40848#0" expanded="true" />
+            <element signature="e#40886#40887#0" expanded="true" />
+            <marker date="1501156830562" expanded="true" signature="5016:5667" ph="SELECT DISTI... crf" />
+            <marker date="1501156830562" expanded="true" signature="9414:9591" ph="SELECT s.tit... section" />
+            <marker date="1501156830562" expanded="true" signature="11573:11774" ph="SELECT disti... study" />
+            <marker date="1501156830562" expanded="true" signature="11949:12536" ph="SELECT ss.la... study" />
+            <marker date="1501156830562" expanded="true" signature="13673:14275" ph="select ss.la... " />
+            <marker date="1501156830562" expanded="true" signature="16925:18584" ph="select st.na... user_account" />
+            <marker date="1501156830562" expanded="true" signature="21808:22664" ph="select s.nam... study" />
+            <marker date="1501156830562" expanded="true" signature="24945:26251" ph="select s.nam... study" />
+            <marker date="1501156830562" expanded="true" signature="28686:30401" ph="SELECT s.nam... item_data" />
+            <marker date="1501156830562" expanded="true" signature="32942:33670" ph="SELECT g.ite... item" />
+            <marker date="1501156830562" expanded="true" signature="36329:36693" ph="SELECT COUNT... event_definition_crf" />
+            <marker date="1501156830562" expanded="true" signature="37104:38325" ph="SELECT dt.co... response_set" />
           </folding>
         </state>
       </provider>
@@ -904,10 +1004,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>cc-sas-extract:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

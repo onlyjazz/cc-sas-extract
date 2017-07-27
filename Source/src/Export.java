@@ -841,6 +841,10 @@ class Export
 			count = 0;
 		    }
 		}
+
+			if (event_crf_id == null) {
+				System.out.print("Event CRF ID is NULL");
+			}
 		
 		section.insertData(sid, site, event, event_crf_id, crf_version, crf_name, event_startdt, item_name, value, ordinal);
 	    }
