@@ -673,7 +673,7 @@ class Export
 		"       e.status_id = status.status_id and " +
 		"       e.status_id != 7 and e.status_id != 5 AND " +
 		"       cv.status_id != 7 and cv.status_id != 5 " + // Must check version as well
-		"group by sid, site, event, crf_name, crf_version, event_startdt, e.date_created, date_completed, event_crf_status";
+		"group by sid, site, event, crf_name, crf_version, event_startdt, e.date_created, e.date_completed, event_crf_status";
 
 	    ResultSet res = st.executeQuery(query);
 	    int note_num = 0;

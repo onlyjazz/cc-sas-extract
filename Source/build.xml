@@ -11,7 +11,7 @@
   <property name="main-class"  value="Export"/>
   <property name="lib.dir"     value="lib"/>
   
-  <property name="myclasspath" value="${lib.dir}/postgresql-8.2-508.jdbc2.jar:/usr/share/java:build/classes"/>
+  <property name="myclasspath" value="${lib.dir}/postgresql-9.3-1103.jdbc3.jar:/usr/share/java:build/classes"/>
 
   <path id="classpath">
     <fileset dir="${lib.dir}" includes="**/*.jar"/>
@@ -45,13 +45,13 @@
 
   <target name="jar" depends="dist">
     <mkdir dir="${jar.dir}"/>
-    <copy file="${lib.dir}/postgresql-8.2-508.jdbc2.jar" todir="${jar.dir}"/>
+    <copy file="${lib.dir}/postgresql-9.3-1103.jdbc3.jar" todir="${jar.dir}"/>
     <jar destfile="${jar.dir}/export.jar" basedir="${classes.dir}" manifest="mainClass"/>
   </target>
 
   <target name="jard" depends="distdebug">
     <mkdir dir="${jar.dir}"/>
-    <copy file="${lib.dir}/postgresql-8.2-508.jdbc2.jar" todir="${jar.dir}"/>
+    <copy file="${lib.dir}/postgresql-9.3-1103.jdbc3.jar" todir="${jar.dir}"/>
     <jar destfile="${jar.dir}/export.jar" basedir="${classes.dir}" manifest="mainClass"/>
   </target>
 

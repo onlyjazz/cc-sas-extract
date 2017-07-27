@@ -15,6 +15,5 @@ bcc="dl@software.co.il"
 to="rivkar@clearclinica.com"
 #
 echo "Greetings from the weekly SAS export for $sn.  Download and unzip the attached file to extract the xml and map files" | mutt -s "$sn SAS export" "$to"  -a "$zf" -b "$bcc" -e 'my_hdr From:ClearClinica<no-reply@repnets.com>'
-rm *.xml
 exit 0
 
