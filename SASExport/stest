@@ -1,0 +1,25 @@
+#!/bin/bash
+# Remove XML files from previous runs
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
+rm *xml
+sn="Vibrant V-220"
+mf="$sn"".map.xml"
+xf="$sn"".xml"
+java -jar export.jar -h localhost -p 5432 -sname "$sn" -U clinica -P clinica -D vibe2 -mapFile "$mf" -xmlFile "$xf"
+sed -i s/mmddyy10/IS8601DA/ *.xml
+zf="$sn".z
+export PGPASSWORD=9701485dl
+psql -Upostgres -hprod2 vibe2 < /code/cc-portal/webapp/schema/csv_extract_for_stats.sql
+echo "Now zipping the csv files"
+zip   "$zf"  /tmp/*.csv
+echo "Now zipping the xml files"
+zip   "$zf"  *xml
+bcc="dl@software.co.il"
+to="dannyl@clearclinica.com"
+#
+echo "Greetings from the daily data export v1.1 for $sn.  Download and unzip the attached file to extract the  files" | mutt -s "$sn data export" "$to"  -a "$zf" -b "$bcc" -e 'my_hdr From:ClearClinica<no-reply@repnets.com>'
+rm *.xml
+rm /tmp/*.csv
+exit 0
+

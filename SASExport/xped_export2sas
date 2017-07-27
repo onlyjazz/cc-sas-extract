@@ -1,0 +1,20 @@
+#!/bin/bash
+# Remove XML files from previous runs
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $DIR
+rm *xml
+#Take the sn from - select unique_identifier from study where study_id = 1;
+sn="PED-HP-0616B"
+mf="$sn"".map.xml"
+xf="$sn"".xml"
+java -jar export.jar -h localhost -p 5432  -study_name "$sn" -U clinica -P clinica -D xped -mapFile "$mf" -xmlFile "$xf"
+sed -i s/mmddyy10/IS8601DA/ *.xml
+sed -i s/\<LENGTH\>-2/\<LENGTH\>2718/ *.map.xml
+zf="$sn".z
+echo "Now zipping the xml files"
+zip   "$zf"  *xml
+bcc="dl@software.co.il,rivkar@clearclinica.com"
+#to="rivkygrin@gmail.com"
+to="frederic.deutsch@gmail.com"
+echo "Greetings from the daily data export for $sn.  Download and unzip the attached file to extract the  files." | mutt -s "$sn data export" "$to"  -a "$zf" -b "$bcc" -e 'my_hdr From:ClearClinica<no-reply@repnets.com>'
+exit 0
