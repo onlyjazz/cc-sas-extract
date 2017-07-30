@@ -4,7 +4,7 @@
 # -s <study.name> -t <to: comma separated emails> -b <bcc: comma separated emails
 # -h <host name of the PG server>  -d <pg database name>
 #
-cd code/cc-sas-extract
+cd /code/cc-sas-extract
 while getopts ":s:t:b:d:h" opt; do
   case $opt in
     s) studyname="$OPTARG"
