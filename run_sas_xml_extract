@@ -1,0 +1,37 @@
+#!/bin/bash
+# Usage
+# ./run_sas_xml_extract
+# -s <study.name> -t <to: comma separated emails> -b <bcc: comma separated emails
+# -h <host name of the PG server>  -d <pg database name>
+#
+cd /code/cc-sas-extract
+while getopts ":s:t:b:d:h" opt; do
+  case $opt in
+    s) studyname="$OPTARG"
+    ;;
+    t) to="$OPTARG"
+    ;;
+    b) bcc="$OPTARG"
+    ;;
+    d) db="$OPTARG"
+    ;;
+    h) host="$OPTARG"
+    ;;
+    \?) echo "Invalid option -$OPTARG" >&2
+    ;;
+  esac
+done
+# Send the output to /tmp
+mf="/tmp/$studyname"".map.xml"
+xf="/tmp/$studyname"".xml"
+# Remove previous runs and create empty files just in case something goes wrong
+rm    "$mf" "$xf"
+touch "$mf" "$xf"
+java -jar export.jar -h "$host" -p 5432 -sname "$studyname" -U clinica -P clinica -D "$db" -mapFile "$mf" -xmlFile "$xf"
+sed -i '' s/mmddyy10/IS8601DA/ "$xf"
+echo "Zip the files to .z to bypass Gmail filtering"
+zf="/tmp/$studyname".z
+zip "$zf" "$mf" "$xf"
+#
+echo "Greetings from the SAS XML export for $studyname.  Download and unzip attached file to extract the xml and map files v4c 20170730" | mutt -s "$studyname SAS export" "$to"  -a "$zf" -b "$bcc" -e 'my_hdr From:ClearClinica<no-reply@repnets.com>'
+exit 0
