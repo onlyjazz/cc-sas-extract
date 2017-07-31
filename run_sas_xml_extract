@@ -3,9 +3,7 @@
 # ./run_sas_xml_extract
 # -s <study.name> -t <to: comma separated emails> -b <bcc: comma separated emails
 # -h <host name of the PG server>  -d <pg database name>
-#
-cd /code/cc-sas-extract
-while getopts ":s:t:b:d:h" opt; do
+sudo /code/cc-sas-extract/run_sas_xml_extract -s"Migraine Treatment with Nerivio Migra neurostimulation device" -telliot@ldbiostats.com  -bdl@software.co.il -d thera -h prod2
   case $opt in
     s) studyname="$OPTARG"
     ;;
@@ -29,6 +27,7 @@ rm    "$mf" "$xf"
 touch "$mf" "$xf"
 java -jar export.jar -h "$host" -p 5432 -sname "$studyname" -U clinica -P clinica -D "$db" -mapFile "$mf" -xmlFile "$xf"
 sed -i  s/mmddyy10/IS8601DA/ "$xf"
+sed -i  s/\<LENGTH\>-2/\<LENGTH\>2718/ *.map.xml
 echo "Zip the files to .z to bypass Gmail filtering"
 zf="/tmp/$studyname".z
 zip "$zf" "$mf" "$xf"
