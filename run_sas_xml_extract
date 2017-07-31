@@ -28,7 +28,7 @@ xf="/tmp/$studyname"".xml"
 rm    "$mf" "$xf"
 touch "$mf" "$xf"
 java -jar export.jar -h "$host" -p 5432 -sname "$studyname" -U clinica -P clinica -D "$db" -mapFile "$mf" -xmlFile "$xf"
-sed -i '' s/mmddyy10/IS8601DA/ "$xf"
+sed -i  s/mmddyy10/IS8601DA/ "$xf"
 echo "Zip the files to .z to bypass Gmail filtering"
 zf="/tmp/$studyname".z
 zip "$zf" "$mf" "$xf"
