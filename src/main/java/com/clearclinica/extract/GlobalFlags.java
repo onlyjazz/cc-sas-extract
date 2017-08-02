@@ -1,7 +1,6 @@
-// Singleton Design Pattern
+package com.clearclinica.extract;// Singleton Design Pattern
 
-public class GlobalFlags
-{
+public class GlobalFlags {
     public static String host = null;
     public static String port = null;
     public static String study_oid = null;
@@ -17,16 +16,16 @@ public class GlobalFlags
     public static boolean spss = false;
     public static boolean output_to_file = false;
 
-    private GlobalFlags() {}
+    private GlobalFlags() {
+    }
 
     static private GlobalFlags _instance;
 
-    static public GlobalFlags getInstance()
-    {
-	if (_instance == null) {
-	    _instance = new GlobalFlags();
-	}
+    static public GlobalFlags getInstance() {
+        if (_instance == null) {
+            _instance = new GlobalFlags();
+        }
 
-	return _instance;
+        return _instance;
     }
 }
