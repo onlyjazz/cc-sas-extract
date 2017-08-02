@@ -1,3 +1,6 @@
+import com.sun.javafx.binding.StringFormatter;
+
+import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.ArrayList;
@@ -62,7 +65,7 @@ public class Section extends ContainerItem
 		return false;
 
 		//RR
-		if (!event_crf_id.equals( ((UniqueData)u).event_crf_id))
+		if (event_crf_id != null && !event_crf_id.equals( ((UniqueData)u).event_crf_id))
 		return false;
 
 	    else return true;
@@ -138,8 +141,9 @@ public class Section extends ContainerItem
 	HashSet<UniqueData> hash = new HashSet<UniqueData>(1000000);
 
 	for (ColumnData d : data) {
-	    UniqueData u = new UniqueData(d.studySubjectId(), d.crfVersion(), d.eventId() /*RR*/, d.event_crf_id);
-	    hash.add(u);
+	    UniqueData u = new UniqueData(d.studySubjectId(), d.crfVersion(), d.eventId(), d.getEventCrfId());
+		// System.out.println(MessageFormat.format("UniqueData: {0}, {1}, {2}, {3}", d.studySubjectId(), d.crfVersion(), d.eventId(), d.getEventCrfId()));
+		hash.add(u);
 	}
 
 	ArrayList<UniqueData> ud = new ArrayList<UniqueData>(hash);	

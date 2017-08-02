@@ -56,8 +56,7 @@ public class ColumnData
 	this.column = column;
 	this.data = value;
 	event_id = event;
-	//RR
-	event_crf_id = event;
+	this.event_crf_id = event_crf_id;
 	this.crf_version = crf_version;
 	this.crf_name = crf_name;
 	study_subject_id = subject;
@@ -77,6 +76,7 @@ public class ColumnData
     public String value()          { return data; }
     public String eventId()        { return event_id; }
 	//RR
+	public String getEventCrfId()        { return event_crf_id; }
 	public String event_crf_id()        { return event_crf_id; }
     public String studySubjectId() { return study_subject_id; }
 

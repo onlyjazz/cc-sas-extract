@@ -56,7 +56,13 @@ public class Column extends Item
 	
 	// data not found in the tree, so search incrementally
 	for (ColumnData data : column_data) {
-	    if (data.studySubjectId().equals(d.sid) && data.eventId().equals(d.event_id) /*RR*/&& data.event_crf_id().equals(d.event_crf_id) && data.crfVersion().equals(d.crf_version)) {
+		if (data.event_crf_id() == null) {
+			System.out.print("TEST");
+		}
+	    if (data.studySubjectId().equals(d.sid)
+				&& data.eventId().equals(d.event_id)
+				/*RR*/&& data.event_crf_id().equals(d.event_crf_id)
+				&& data.crfVersion().equals(d.crf_version)) {
 		if (data.ordinal() == ordinal) {
 		    return data;
 		}
@@ -300,7 +306,7 @@ public class Column extends Item
 
     public int getDepth(Section.UniqueData d)
     {
-	Integer max = max_ordinals.get(key(d.sid,d.event_id,/*RR*/d.event_crf_id,d.crf_version));
+	Integer max = max_ordinals.get(key(d.sid,d.event_id, d.event_crf_id,d.crf_version));
 
 	if (max == null) {
 	    return 1;

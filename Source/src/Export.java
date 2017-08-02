@@ -748,6 +748,7 @@ class Export
 		"SELECT s.name AS site, " +
 		"       ss.label AS sid, " +
 		"       sed.name AS event, " +
+		"       e.event_crf_id AS event_crf_id, " +
 		"       se.date_start AS event_startdt, " +
 		"       crf.name AS crf_name, " +
 		"       c.name AS crf_version, " +
@@ -807,10 +808,10 @@ class Export
 		String event_startdt = res.getString("event_startdt");
 		String site = res.getString("site");
 		String event = res.getString("event");		
+		String event_crf_id = res.getString("event_crf_id");
 		int ordinal = res.getInt("ordinal");
 		String crf_version = res.getString("crf_version");
 		String crf_name = res.getString("crf_name");
-		int event_crf_id = res.getInt("event_crf_id");//RR
 
 		// Check if this sid is a new one. This would signify that a complete subject has been pulled from the DB and this 
 		// section could be written to disk if need be
@@ -841,8 +842,14 @@ class Export
 			count = 0;
 		    }
 		}
+
+			/*
+			if (event_crf_id == null || event_crf_id.isEmpty()) {
+				System.out.print("Event CRF ID is NULL");
+			}
+			*/
 		
-		section.insertData(sid, site, event, crf_version, crf_name, event_startdt, item_name, value, ordinal,event_crf_id);
+			section.insertData(sid, site, event, event_crf_id, crf_version, crf_name, event_startdt, item_name, value, ordinal);
 	    }
 
 	    ((Section)section).sectionCompleted();
