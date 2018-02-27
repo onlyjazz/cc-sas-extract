@@ -292,7 +292,7 @@ class UserInterface {
 
                 } else if (studies.size() == 1) {
                     // Only one match found
-                    study_id_selected = study_ids.get(1);
+                    study_id_selected = study_ids.get(0);
                 } else {
 
                     boolean selected = false;
