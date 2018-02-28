@@ -1,0 +1,2 @@
+Main-Class: com.clearclinica.extract.Export
+Class-Path: postgresql-9.3-1103.jdbc3.jar

@@ -1,7 +1,7 @@
 # cc-sas-extract
 Java-based batch SAS XML extract 
 Code originally written by Rick Watts rick.watts@ualberta.ca
-WCHRI OpenClinica Export README Last updated Jan 23, 2012
+WCHRI OpenClinica com.clearclinica.extract.Export README Last updated Jan 23, 2012
 
 This package contains the following files:
 export2Sas                      Script that automatically runs the program and corrects CRFDATE format( D. Lieberman)
